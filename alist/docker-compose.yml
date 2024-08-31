@@ -4,7 +4,7 @@ services:
     container_name: alist
     volumes:
       - /data/disk2t/alist:/opt/alist/data
-      - /data/disk2t/homecloud:/homecloud
+      - /data/disk2t/HomeCloud:/HomeCloud
       - /data/disk4t:/disk4t
     ports:
       - 8100:5244
