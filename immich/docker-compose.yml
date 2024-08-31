@@ -3,7 +3,7 @@ services:
     image: ghcr.io/immich-app/immich-server:${IMMICH_VERSION}
     container_name: immich_server
     volumes:
-      - /data/disk2t/HomeCloud/photos:/usr/src/app/upload
+      - /data/disk2t/photos:/usr/src/app/upload
       - /etc/localtime:/etc/localtime:ro
     env_file:
       - .env

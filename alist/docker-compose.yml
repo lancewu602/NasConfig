@@ -4,8 +4,10 @@ services:
     container_name: alist
     volumes:
       - /data/disk2t/alist:/opt/alist/data
-      - /data/disk2t/HomeCloud:/HomeCloud
-      - /data/disk4t:/disk4t
+      - /data/disk2t/HomeCloud:/HomeCloud/disk2t
+      - /data/disk2t/Trash:/Trash/disk2t
+      - /data/disk4t/HomeCloud:/HomeCloud/disk4t
+      - /data/disk4t/Trash:/Trash/disk4t
     ports:
       - 8100:5244
     environment:
