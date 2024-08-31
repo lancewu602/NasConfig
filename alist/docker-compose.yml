@@ -1,0 +1,43 @@
+services:
+  alist:
+    image: xhofe/alist:latest-ffmpeg
+    container_name: alist
+    volumes:
+      - /data/disk2t/alist:/opt/alist/data
+      - /data/disk2t/homecloud:/homecloud
+      - /data/disk4t:/disk4t
+    ports:
+      - 8100:5244
+    environment:
+      - PUID=0
+      - PGID=0
+      - UMASK=022
+      - TZ=Asia/Shanghai
+    restart: unless-stopped
+  aria2:
+    image: superng6/aria2:webui-latest
+    container_name: aria2
+    volumes:
+      - /data/disk2t/aria2/config:/config
+      - /data/downloads:/downloads
+      - /data/disk2t/alist:/opt/alist/data
+    ports:
+      - 8200:8080
+      - 6800:6800
+      - 6881:6881
+      - 6881:6881/udp
+    environment:
+      - PUID=0
+      - PGID=0
+      - TZ=Asia/Shanghai
+      - SECRET=admin
+      - CACHE=1024M
+      - PORT=6800
+      - WEBUI_PORT=8080
+      - BTPORT=32516
+      - UT=true
+      - FA=falloc
+      - RUT=true
+      - QUIET=true
+      - SMD=true
+    restart: unless-stopped
