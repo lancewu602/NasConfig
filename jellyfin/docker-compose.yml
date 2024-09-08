@@ -7,5 +7,5 @@ services:
     volumes:
       - /data/disk2t/jellyfin/config:/config
       - /data/jellyfin/cache:/cache
-      - /data/disk4t/HomeCloud/Movies:/media/Movies
+      - /data/disk4t/HomeCloud/Movies:/media/Movies:ro
     restart: unless-stopped
