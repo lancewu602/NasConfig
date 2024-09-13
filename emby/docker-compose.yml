@@ -1,0 +1,14 @@
+services:
+  emby:
+    image: emby/embyserver
+    container_name: embyserver
+    environment:
+      - UID=0
+      - GID=0
+    volumes:
+      - /data/disk2t/emby/config:/config
+      - /data/disk4t/HomeCloud/Movies:/media/movies
+      - /data/disk4t/HomeCloud/Shows:/media/tvshows
+    ports:
+      - 8096:8096
+    restart: unless-stopped
