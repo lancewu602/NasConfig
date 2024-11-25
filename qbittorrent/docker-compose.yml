@@ -6,13 +6,13 @@ services:
       - PUID=0
       - PGID=0
       - TZ=Asia/Shanghai
-      - WEBUI_PORT=8600
+      - WEBUI_PORT=8500
       - TORRENTING_PORT=6888
     volumes:
-      - /data/disk2t/qbittorrent/appdata:/config
+      - /data/disk2t/qbittorrent:/config
       - /data/downloads:/downloads
     ports:
-      - 8600:8600
+      - 8500:8500
       - 6888:6888
       - 6888:6888/udp
     restart: unless-stopped
