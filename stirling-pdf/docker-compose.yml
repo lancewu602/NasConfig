@@ -1,0 +1,14 @@
+services:
+  stirling-pdf:
+    image: stirlingtools/stirling-pdf:latest
+    ports:
+      - '8700:8080'
+    volumes:
+      - /data/disk2t/stirling-pdf/trainingData:/usr/share/tessdata # Required for extra OCR languages
+      - /data/disk2t/stirling-pdf/extraConfigs:/configs
+#      - /data/disk2t/stirling-pdf/customFiles:/customFiles/
+#      - /data/disk2t/stirling-pdf/logs:/logs/
+    environment:
+      - DOCKER_ENABLE_SECURITY=false
+      - INSTALL_BOOK_AND_ADVANCED_HTML_OPS=true
+      - LANGS=zh_CN
