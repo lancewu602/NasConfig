@@ -2,7 +2,7 @@ services:
   stirling-pdf:
     image: stirlingtools/stirling-pdf:latest
     ports:
-      - '8700:8080'
+      - 8700:8080
     volumes:
       - /data/disk2t/stirling-pdf/trainingData:/usr/share/tessdata # Required for extra OCR languages
       - /data/disk2t/stirling-pdf/extraConfigs:/configs

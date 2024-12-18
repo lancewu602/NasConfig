@@ -1,7 +1,0 @@
-services:
-  stirling-pdf:
-    image: linzeyi/hivision_idphotos:latest
-    ports:
-      - '8900:7860'
-    environment:
-      - DEFAULT_LANG=zh_CN
