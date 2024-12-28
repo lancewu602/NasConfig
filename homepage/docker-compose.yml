@@ -3,7 +3,7 @@ services:
     image: ghcr.io/gethomepage/homepage:latest
     container_name: homepage
     ports:
-      - 3000:3000
+      - 8000:3000
     volumes:
-      - /Users/didi/config:/app/config
+      - /data/disk2t/homepage/config:/app/config
       - /var/run/docker.sock:/var/run/docker.sock

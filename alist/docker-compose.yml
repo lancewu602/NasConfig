@@ -1,6 +1,6 @@
 services:
   alist:
-    image: xhofe/alist:v3.41.0-ffmpeg
+    image: xhofe/alist:latest-ffmpeg
     container_name: alist
     volumes:
       - /data/disk2t/alist:/opt/alist/data
