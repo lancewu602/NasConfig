@@ -7,3 +7,4 @@ services:
     volumes:
       - /data/disk2t/homepage/config:/app/config
       - /var/run/docker.sock:/var/run/docker.sock
+    restart: unless-stopped

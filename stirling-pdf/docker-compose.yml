@@ -13,3 +13,4 @@ services:
       - DOCKER_ENABLE_SECURITY=false
       - INSTALL_BOOK_AND_ADVANCED_HTML_OPS=true
       - LANGS=zh_CN
+    restart: unless-stopped
