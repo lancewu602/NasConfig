@@ -7,4 +7,6 @@ services:
     volumes:
       - /data/disk2t/homepage/config:/app/config
       - /var/run/docker.sock:/var/run/docker.sock
+    environment:
+      - HOMEPAGE_ALLOWED_HOSTS=*
     restart: unless-stopped

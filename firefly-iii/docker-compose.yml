@@ -5,14 +5,15 @@ services:
     container_name: firefly_iii_core
     restart: always
     volumes:
-      - /Users/didi/firefly_iii/upload:/var/www/html/storage/upload
+      - /data/disk2t/firefly-iii/upload:/var/www/html/storage/upload
     env_file: .env
     networks:
       - firefly_iii
     ports:
-      - 8090:8080
+      - 8900:8080
     depends_on:
       - db
+
   db:
     image: mariadb:lts
     hostname: db
@@ -22,7 +23,8 @@ services:
     networks:
       - firefly_iii
     volumes:
-      - /Users/didi/firefly_iii/db:/var/lib/mysql
+      - /data/disk2t/firefly-iii/db:/var/lib/mysql
+
   cron:
     #
     # To make this work, set STATIC_CRON_TOKEN in your .env file or as an environment variable and replace REPLACEME below
