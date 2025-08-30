@@ -4,7 +4,7 @@ services:
     image: ghcr.io/open-webui/open-webui:main
     container_name: open-webui
     volumes:
-      - /Users/didi/DockerVolumes/open-webui/data:/app/backend/data
+      - /data:/app/backend/data
     ports:
       - 3000:8080
     restart: always

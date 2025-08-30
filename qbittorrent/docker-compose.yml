@@ -1,6 +1,7 @@
+# https://hub.docker.com/r/linuxserver/qbittorrent
 services:
   qbittorrent:
-    image: lscr.io/linuxserver/qbittorrent:latest
+    image: lscr.io/linuxserver/qbittorrent:5.1.2
     container_name: qbittorrent
     environment:
       - PUID=0
